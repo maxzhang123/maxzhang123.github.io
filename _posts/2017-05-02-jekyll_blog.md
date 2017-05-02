@@ -13,9 +13,13 @@ Jekyll时一款简单的静态博客生成引擎，比较适合技术博客。�
 
 官方上的教程快速指南如下
 ~ $ gem install jekyll
+
 ~ $ jekyll new myblog
+
 ~ $ cd myblog
+
 ~/myblog $ jekyll serve
+
 # => Now browse to http://localhost:4000
  
 -------------
@@ -43,7 +47,7 @@ $ jekyll serve
 ![ ]({{ site.url }}/img/blogImg/jekyll_blog.png)   
 
 
-//觉得默认主题不好看，也可以搜下好看的主题或者自己实现.
+//如果觉得默认主题不好看，也可以搜下好看的主题或者自己实现.
 
 //转载请注明出处，谢谢
 
