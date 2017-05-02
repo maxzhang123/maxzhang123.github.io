@@ -39,14 +39,13 @@ paginate_path: "page/:num/"
 owner:
   name: maxZhang
   avatar: avatar.jpg
-  # job: "小溪之歌"
   bio: "在代码的道路上不断探索"
 
   github: maxzhang123 #username
   # weibo: bailuer #username
   facebook: maxzhangchn #username
   email: maxzhangchn@foxmail.com
-  # duoshuo: streamelody #多说域名   多说即将关闭
+  duoshuo:    #多说域名   多说即将关闭
 
   google:
     plus: #username
