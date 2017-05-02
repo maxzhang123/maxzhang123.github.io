@@ -1,24 +1,75 @@
 ---
 layout: default
 ---
+<!-- 判断是否插入首页图片 -->
+{% if page.image.feature %}
+<div class="post-image-feature">
+    <img class="feature-image" src=
+        {% if page.image.feature contains 'https' or page.image.feature contains 'http' %}
+        "{{ page.image.feature }}"
+        {% else %}
+        "{{ site.url }}/img/{{ page.image.feature }}"
+        {% endif %}
+        alt="{{ page.title }} feature image">
+        
+        {% if page.image.credit %}
+        <span class="image-credit">Photo Credit: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></span>
+        {% endif %}
+</div>
+{% endif %}
 
-<article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <div class="post-meta">
-      <img src="/images/calendar.png" width="20px"/> 
-      <time datetime="{{page.date | date: date_to_xmlschema}}" itemprop="datePublished" class="post-meta__date date">{{page.date | date: "%F"}}</time>  
-         
-      <span id="busuanzi_container_page_pv"> | 阅读：<span id="busuanzi_value_page_pv"></span>次</span>
-    </p>
-    </div>
-  </header>
+<!-- 添加日期和阅读 -->
+<div id="post">
+    <header class="post-header">
+        <span class="post-meta">
+            <span class="post-date">
+                {{ page.date | date: "%Y-%m-%d" | upcase }}
+            </span>
+            •
+            {% include read_time.html %}
+        </span>
+        <h1 title="{{ page.title }}">{{ page.title }}</h1>
+    </header>
+    
+    <!-- 引入google code pretiffy高亮样式 -->
+    <link href="/js/google-code-prettify/themes/github-v2.css" rel="stylesheet" type="text/css" />
+    
+    <!-- 添加博文 -->
+    <article class="post-content">
+        {{ content }}
+    </article>
+</div>
 
-  <section class="post">
-    {{ content }}
+<!-- 引入google code pretiffy -->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/google-code-prettify/prettify.js"></script>
+<script type="text/javascript">
+    $(function(){
+      $("pre").addClass("prettyprint linenums");
+      prettyPrint();
+      });
+    </script>
 
-  </section>
-</article>
-
+<!-- 添加博文分割线 -->
+<hr class="post-list__divider" />
 {% include new-old.html %}
-{% include comments.html %}
+
+<!-- 多说评论框 start -->
+{% if page.comments == true %}
+<div class="ds-thread" data-thread-key="{{ site.url }}" data-title="{{ page.title }}" data-url="{{ site.url }}"></div>
+<!-- 多说评论框 end -->
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    var duoshuoQuery = {short_name:"{{ site.owner.duoshuo }}"};
+    (function() {
+     var ds = document.createElement('script');
+     ds.type = 'text/javascript';ds.async = true;
+     ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+     ds.charset = 'UTF-8';
+     (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+     })();
+    </script>
+<!-- 多说公共JS代码 end -->
+{% endif %}
