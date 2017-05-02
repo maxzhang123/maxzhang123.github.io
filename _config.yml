@@ -37,7 +37,7 @@ paginate_path: "page/:num/"
 ####################################
 #
 owner:
-  name: maxzhang
+  name:  maxzhang
   avatar: avatar.jpg
   # job: "小溪之歌"
   bio: "在代码的道路上不断探索"
