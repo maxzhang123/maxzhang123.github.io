@@ -13,19 +13,19 @@ comments: true
 
 ### 最终效果
 **final Effects**  
-({{ site.url }}/img/blogImg/codeFormat_gif.gif)  
+![final Effects]({{ site.url }}/img/blogImg/codeFormat_gif.gif)  
 
 ### 具体代码实现
 1.打开Xcode创建mac程序 -> macOS -> Cocoa Application，接着设置工程参数即可
-({{ site.url }}/img/blogImg/codeFormat_1.png)   
-({{ site.url }}/img/blogImg/codeFormat_2.png) 
+![ ]({{ site.url }}/img/blogImg/codeFormat_1.png)   
+![ ]({{ site.url }}/img/blogImg/codeFormat_2.png) 
 
 接下来添加Target
-({{ site.url }}/img/blogImg/codeFormat_3.png)   
-({{ site.url }}/img/blogImg/codeFormat_4.png) 
+![ ]({{ site.url }}/img/blogImg/codeFormat_3.png)   
+![ ]({{ site.url }}/img/blogImg/codeFormat_4.png) 
 
 配置Target名称等信息，Finish完成，此时会弹出Scheme对话框，点击Activate启用。文件结构如下
-({{ site.url }}/img/blogImg/codeFormat_5.png)   
+![ ]({{ site.url }}/img/blogImg/codeFormat_5.png)   
 
 **认识插件**
 SourceEditorExtension类和插件的生命周期和配置有关，实现了XCSourceEditorExtension协议中的一个方法extensionDidFinishLaunching() 和一个变量commandDefinitions，默认是被注释掉的。
