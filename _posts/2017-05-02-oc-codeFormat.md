@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Xcode8代码格式化插件
-categories: [Xcode插件]
+categories: [xcode]
 tags: [工具]
 date: 2016-04-05 19:51:03
 comments: true
@@ -16,11 +16,14 @@ comments: true
 ![final Effects]({{ site.url }}/img/blogImg/codeFormat_gif.gif)  
 
 ### 具体代码实现
+
 1.打开Xcode创建mac程序 -> macOS -> Cocoa Application，接着设置工程参数即可
 ![ ]({{ site.url }}/img/blogImg/codeFormat_1.png)   
 ![ ]({{ site.url }}/img/blogImg/codeFormat_2.png) 
 
+
 接下来添加Target
+
 ![ ]({{ site.url }}/img/blogImg/codeFormat_3.png)   
 ![ ]({{ site.url }}/img/blogImg/codeFormat_4.png) 
 
