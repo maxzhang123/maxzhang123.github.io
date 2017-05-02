@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Xcode8代码格式化插件
+title: jekyll搭建blog
 categories: [jekyll]
 tags: [jekyll]
 date: 2016-05-02 15:00:00
@@ -45,7 +45,6 @@ $ jekyll serve
 
 //觉得默认主题不好看，也可以搜下好看的主题或者自己实现.
 
-//完整项目代码:https://github.com/maxzhang123/codeFormat
 //转载请注明出处，谢谢
 
 

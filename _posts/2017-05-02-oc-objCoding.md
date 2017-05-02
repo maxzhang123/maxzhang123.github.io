@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Xcode8代码格式化插件
+title: iOS 自动实现对象序列化方法
 categories: [OC]
 tags: [OC]
 date: 2016-05-02 15:12:03
@@ -200,5 +200,5 @@ static NSString *imageType   = @"UIImage"; // UIImage 类型
 ```
 
 
-//完整项目代码:https://github.com/maxzhang123/codeFormat
+//完整项目代码:https://github.com/maxzhang123/MXCoding.git
 //转载请注明出处，谢谢
